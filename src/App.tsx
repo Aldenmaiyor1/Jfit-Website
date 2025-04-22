@@ -1,14 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 import Home from './pages/Home'
+import NavBar from "./components/NavBar"
 
 function App() {
 
   return (
-    <div>
-      <h3 className='text-white'>asdfsdsw</h3>
+    <div >
+      <NavBar />
       <Home />
     </div>
   )
