@@ -10,8 +10,12 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Logo from "../assets/Logo.png"
+import { useNavigate } from 'react-router';
 
-const pages = ['HOME', 'BEFORE/AFTER ', 'ABOUT', 'CONTACT'];
+const pages = [['HOME','home'], 
+    ['BEFORE/AFTER', 'gallery'], 
+    ['ABOUT', 'about'], 
+    ['CONTACT','contact']];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -31,6 +35,8 @@ function NavBar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+  let navigate = useNavigate()
 
   return (
     <AppBar position="static">
@@ -84,8 +90,11 @@ function NavBar() {
               sx={{ display: { xs: 'block', md: 'none' } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
+                <MenuItem key={page} onClick={() => {
+                    handleCloseNavMenu
+                    navigate(`${page[1]}`)
+                    }}>
+                  <Typography sx={{ textAlign: 'center' }}>{page[0]}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -101,10 +110,13 @@ function NavBar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => {
+                    handleCloseNavMenu
+                    navigate(`${page[1]}`)
+                }}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                {page[0]}
               </Button>
             ))}
           </Box>
