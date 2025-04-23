@@ -5,7 +5,7 @@ import 'leaflet/dist/leaflet.css';
 const Contact = () => {
     return (
         <div>
-            <div>
+            <div className='text-white'>
                 <p>Location 📍  : 239 Queens Street, Auckland CBD, 1010, Cityfitness</p>
                 <p>Phone number: 0211865231</p>
                 <p>Kakao ID : jino2239</p>
