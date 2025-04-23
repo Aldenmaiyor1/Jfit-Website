@@ -3,10 +3,10 @@ import React from 'react'
 const images = import.meta.glob<string>('../assets/BeforeAfterPics/*.{png,jpg,jpeg}', {
     eager: true,
     import: 'default',
-  });
-  
+});
 
-  const imageArray = Object.values(images)
+
+const imageArray = Object.values(images)
 
 const PhotoGallery = () => {
 
@@ -16,9 +16,11 @@ const PhotoGallery = () => {
             <h1>
                 Gallery page
             </h1>
-            <div>
+            <div className='flex gap-[10px] flex-wrap'>
                 {imageArray.map((srcId, index) => (
-                    <img key={index} src={srcId} alt={`Image ${index}`} />
+                    <div className='flex h-[150px] w-[200px] justify-center'>
+                        <img className="h-[150px]" key={index} src={srcId} alt={`Image ${index}`} />
+                    </div>
                 ))}
             </div>
         </div>

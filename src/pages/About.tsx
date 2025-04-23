@@ -9,8 +9,8 @@ const About = () => {
 
                 <div className=''>
                     <div>
-                        <h1 className='text-3xl font-bold'>About us</h1>
-                        <p>
+                        <h1 className='text-3xl font-bold text-white'>About us</h1>
+                        <p className='text-white'>
                             Based on theories such as NASM, ISSA, and anatomy, we aim for healthy training that reduces the risk of injury and increases exercise efficiency through numerous experiences and careers.
 
                             We are setting up training for various purposes by conducting scientific exercise programming according to each member's purpose and physical fitness level.
@@ -20,8 +20,8 @@ const About = () => {
                     </div>
 
                     <div>
-                        <h1 className='text-3xl font-bold'>Certification</h1>
-                        <p>
+                        <h1 className='text-3xl font-bold text-white'>Certification</h1>
+                        <p className='text-white'>
                             23' ICN Men's Fitness Overall Champion
                             23' ICN Mens Fitness Open,Novice 1st
                             20' ICN Men's Fitness Open,Novice 2nd
