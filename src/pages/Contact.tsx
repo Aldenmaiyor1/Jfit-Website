@@ -13,7 +13,7 @@ const Contact = () => {
 
             <div>
                 <MapContainer
-                    center={[36.8502, 174.7646]}
+                    center={[-36.8502, 174.7646]}
                     zoom={13}
                     style={{ height: '400px', width: '100%' }}
                 >

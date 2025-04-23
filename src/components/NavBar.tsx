@@ -21,10 +21,10 @@ function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
-  const handleOpenNavMenu = (event) => {
+  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
+  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElUser(event.currentTarget);
   };
 
@@ -90,7 +90,7 @@ function NavBar() {
               sx={{ display: { xs: 'block', md: 'none' } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={() => {
+                <MenuItem onClick={() => {
                     handleCloseNavMenu
                     navigate(`${page[1]}`)
                     }}>
@@ -109,7 +109,6 @@ function NavBar() {
                 }} >
             {pages.map((page) => (
               <Button
-                key={page}
                 onClick={() => {
                     handleCloseNavMenu
                     navigate(`${page[1]}`)

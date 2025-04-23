@@ -1,11 +1,11 @@
 
 import './App.css'
-import Home from './pages/Home'
-import NavBar from "./components/NavBar"
+import Home from './pages/Home.js'
+import NavBar from "./components/NavBar.js"
 import { Routes, Route, Navigate } from 'react-router-dom'
-import PhotoGallery from './pages/PhotoGallery'
-import About from './pages/About'
-import Contact from './pages/Contact'
+import PhotoGallery from './pages/PhotoGallery.js'
+import About from './pages/About.js'
+import Contact from './pages/Contact.js'
 
 function App() {
 
