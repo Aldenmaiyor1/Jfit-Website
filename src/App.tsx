@@ -12,16 +12,17 @@ function App() {
   return (
     <>
       <NavBar />
+      <div className='bg-black'>
+        <Routes >
 
-      <Routes >
-      
-        <Route path="/home" element ={<Home />} />
-        <Route path="/gallery" element = {<PhotoGallery />} />
-        <Route path="/about" element = {<About /> } />
-        <Route path="/contact" element = {<Contact />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/gallery" element={<PhotoGallery />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
 
-        <Route path="*" element={<Navigate to="/home" replace />} />
-      </Routes>
+          <Route path="*" element={<Navigate to="/home" replace />} />
+        </Routes>
+      </div>
     </>
   )
 }

@@ -1,16 +1,16 @@
 import React from 'react'
 
-const images = import.meta.glob<{ default: string }>('../assets/BeforeAfterPics/*.{png,jpg,jpeg}', {
+const images = import.meta.glob<string>('../assets/BeforeAfterPics/*.{png,jpg,jpeg}', {
     eager: true,
     import: 'default',
   });
   
 
-  const imageArray = Object.values(images).map((mod) => mod.default);
+  const imageArray = Object.values(images)
 
 const PhotoGallery = () => {
 
-
+    console.log(imageArray)
     return (
         <div>
             <h1>
