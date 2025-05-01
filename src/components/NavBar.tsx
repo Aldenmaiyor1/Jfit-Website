@@ -12,10 +12,10 @@ import MenuItem from '@mui/material/MenuItem';
 import Logo from "../assets/Logo.png"
 import { useNavigate } from 'react-router';
 
-const pages = [['HOME','home'], 
-    ['BEFORE/AFTER', 'gallery'], 
-    ['ABOUT', 'about'], 
-    ['CONTACT','contact']];
+const pages = [['HOME', 'home'],
+['BEFORE/AFTER', 'gallery'],
+['ABOUT', 'about'],
+['CONTACT', 'contact']];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -40,9 +40,9 @@ function NavBar() {
 
   return (
     <AppBar position="static">
-      <Container maxWidth={false} sx={{backgroundColor: '#130f0c'}} >
+      <Container maxWidth={false} sx={{ backgroundColor: '#130f0c' }} >
         <Toolbar disableGutters>
-          <img src={Logo} className='h-20 mr-[50px]'/>
+          <img src={Logo} className='h-20 mr-[50px]' />
           {/* <Typography
             variant="h6"
             noWrap
@@ -69,7 +69,7 @@ function NavBar() {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
-              sx={{paddingRight: '0px'}}
+              sx={{ paddingRight: '0px' }}
             >
               <MenuIcon />
             </IconButton>
@@ -91,33 +91,43 @@ function NavBar() {
             >
               {pages.map((page) => (
                 <MenuItem onClick={() => {
-                    handleCloseNavMenu
-                    navigate(`${page[1]}`)
-                    }}>
+                  handleCloseNavMenu
+                  navigate(`${page[1]}`)
+                }}>
                   <Typography sx={{ textAlign: 'center' }}>{page[0]}</Typography>
                 </MenuItem>
               ))}
             </Menu>
           </Box>
-  
-          <Box sx={{ 
-                flexGrow: 1, 
-                display: { xs: 'none', md: 'flex' },
-                justifyContent: 'center',
-                paddingRight: '200px',
-                gap: '100px'
-                }} >
-            {pages.map((page) => (
-              <Button
-                onClick={() => {
+          <Box sx={{
+            display:'flex',
+            width:'100%',
+            justifyContent:'center'
+          }}>
+            <Box sx={{
+              flexGrow: 1,
+              display: { xs: 'none', md: 'flex' },
+              justifyContent: 'space-between',
+              maxWidth: '1000px',
+              paddingRight: '200px',
+              // gap: '100px',
+
+
+            }} >
+              {pages.map((page) => (
+                <Button
+                  onClick={() => {
                     handleCloseNavMenu
                     navigate(`${page[1]}`)
-                }}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page[0]}
-              </Button>
-            ))}
+                  }}
+                  sx={{ my: 2, color: 'white', display: 'block' }}
+                >
+                  {page[0]}
+                </Button>
+              ))}
+              
+            </Box>
+
           </Box>
           {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">

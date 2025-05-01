@@ -16,12 +16,15 @@ const PhotoGallery = () => {
             <h1 className='text-white text-center pt-[30px] pb-[30px]'>
                 Gallery page
             </h1>
-            <div className='flex gap-[10px] flex-wrap'>
+            <div className='grid grid-cols-2 lg:grid-cols-4 gap-2'>
                 {imageArray.map((srcId, index) => (
-                    <div className='flex h-[150px] w-[200px] justify-center'>
-                        <img className="h-[150px]" key={index} src={srcId} alt={`Image ${index}`} />
+                    <div className='flex justify-center'>
+                        <img className="h-[150px] md:h-[400px]" key={index} src={srcId} alt={`Image ${index}`} />
                     </div>
                 ))}
+            </div>
+            <div>
+                .
             </div>
         </div>
     )

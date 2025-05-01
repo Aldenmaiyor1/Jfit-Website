@@ -4,11 +4,11 @@ import JayPhoto from "../assets/JayFit_About_Photo.jpg"
 const About = () => {
     return (
         <div className='border-black'>
-            <div className=''>
-                <img src={JayPhoto} />
+            <div className='flex flex-col'>
+                <img className='mt-[30px] self-center' src={JayPhoto} />
 
-                <div className=''>
-                    <div className='bg-gray-900 mx-[15px] my-[15px] p-[10px] border-b-gray-800 rounded-2xl'>
+                <div className='flex flex-col items-center px-[10px]'>
+                    <div className='bg-gray-900 mx-[15px] !my-[15px] p-[10px] border-b-gray-800 rounded-2xl w-[100%]'>
                         <h1 className='text-3xl font-bold text-white text-center'>About us</h1>
                         <p className='text-white'>
                             Based on theories such as NASM, ISSA, and anatomy, we aim for healthy training that reduces the risk of injury and increases exercise efficiency through numerous experiences and careers.
@@ -19,9 +19,9 @@ const About = () => {
                         </p>
                     </div>
 
-                    <div className='bg-gray-900 mx-[15px] mb-[50px] p-[10px] border-b-gray-800 rounded-2xl'>
-                        <h1 className='text-3xl font-bold text-white'>Certification</h1>
-                        <p className='text-white'>
+                    <div className='bg-gray-900 mx-[15px] mb-[50px] p-[10px] border-b-gray-800 rounded-2xl w-[100%]'>
+                        <h1 className='text-3xl font-bold text-white text-center !mb-[20px]'>Certifications</h1>
+                        <p className='text-white text-center'>
                             23' ICN Men's Fitness Overall Champion
                             <br></br>
                             23' ICN Mens Fitness Open,Novice 1st
