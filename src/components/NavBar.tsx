@@ -40,7 +40,7 @@ function NavBar() {
 
   return (
     <AppBar position="static">
-      <Container maxWidth={false} sx={{backgroundColor: '#060706'}} >
+      <Container maxWidth={false} sx={{backgroundColor: '#130f0c'}} >
         <Toolbar disableGutters>
           <img src={Logo} className='h-20 mr-[50px]'/>
           {/* <Typography

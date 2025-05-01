@@ -13,7 +13,7 @@ const PhotoGallery = () => {
     console.log(imageArray)
     return (
         <div>
-            <h1>
+            <h1 className='text-white text-center pt-[30px] pb-[30px]'>
                 Gallery page
             </h1>
             <div className='flex gap-[10px] flex-wrap'>
