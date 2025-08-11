@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import HomeImage from "../assets/Home_Image.png"
 import repsImage from "../assets/CertificationPhotos/REPS.png"
 import NASMImage from "../assets/CertificationPhotos/NASM.png"
@@ -11,8 +11,19 @@ import baImage4 from "../assets/BeforeAfterPics/491022060_3814366938780244_80289
 import baImage5 from "../assets/BeforeAfterPics/490986400_687094897348663_149443216634239436_n.jpg"
 import baImage6 from "../assets/BeforeAfterPics/490986458_2051099182036315_3587029622981008114_n.jpg"
 import TextCarousel from '../components/TextCarousel'
+import axios from "axios"
 
 const Home = () => {
+
+    const [yeet, setYeet] = useState<any>()
+
+    useEffect(() => {
+        axios.get("http://localhost:9000/hello")
+            .then((res)=> {
+                console.log(res)
+            })
+    },[])
+    
     return (
         <div className='min-h-screen overflow-auto'>
             <div className='relative'>

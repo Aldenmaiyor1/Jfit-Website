@@ -1,5 +1,5 @@
 import React from 'react'
-import JayPhoto from "../assets/JayFit_About_Photo.jpg"
+import JayPhoto from "../assets/New_JF.png"
 
 const About = () => {
     return (
@@ -22,13 +22,16 @@ const About = () => {
                     <div className='bg-gray-900 mx-[15px] mb-[50px] p-[10px] border-b-gray-800 rounded-2xl w-[100%]'>
                         <h1 className='text-3xl font-bold text-white text-center !mb-[20px]'>Certifications</h1>
                         <p className='text-white text-center'>
-                            23' ICN Men's Fitness Overall Champion
+                            25' ICN Men's Fitness Overall Champion
+                            <br></br>
+                            25' ICN Men's Fitness Open 1st
                             <br></br>
                             23' ICN Mens Fitness Open,Novice 1st
                             <br></br>
                             20' ICN Men's Fitness Open,Novice 2nd
                             <br></br>
                             20'23' INBA Sports model Open class 3rd
+                            <br></br>
                             <br></br>
                             -ISSA CPT / Fitness Coach Certified
                             <br></br>
