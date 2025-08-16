@@ -11,8 +11,8 @@ const center = { lat: -36.850127098234815, lng: 174.76459126009595 };
 
 function Contact() {
     return (
-        <div className="flex flex-col min-h-screen bg-black">
-            <div className='border-2 border-white p-4 rounded-lg bg-black bg-opacity-50 mx-8 my-4'>
+        <div className="flex flex-col min-h-screen bg-grey-900 text-white">
+            <div className='border-2 border-white p-4 rounded-lg bg-grey-800 bg-opacity-50 mx-8 my-4'>
                 <div className="text-white mb-4">
                     <p>Location 📍 : 239 Queen Street, Auckland Central, 1010</p>
                     <p>Phone number: 0211865231</p>
